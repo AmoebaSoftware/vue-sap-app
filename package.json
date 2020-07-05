@@ -12,6 +12,7 @@
     "@sap/cds": "^3",
     "core-js": "^3.6.5",
     "express": "^4",
+    "fiori-fundamentals": "^1.7.5",
     "fundamental-vue": "^0.18.3",
     "vue": "^2.6.11"
   },
