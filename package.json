@@ -3,11 +3,14 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "cds-start": "npx cds run",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@sap/cds": "^3",
+    "express": "^4",
     "core-js": "^3.6.5",
     "vue": "^2.6.11"
   },
@@ -33,6 +36,17 @@
       "parser": "babel-eslint"
     },
     "rules": {}
+  },
+  "cds": {
+    "requires": {
+      "NorthWind": {
+        "kind": "odata",
+        "model": "srv/external/NorthWind",
+        "credentials": {
+          "url": "https://services.odata.org/Experimental/OData/OData.svc"
+        }
+      }
+    }
   },
   "browserslist": [
     "> 1%",
