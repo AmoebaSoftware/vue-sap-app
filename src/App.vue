@@ -1,17 +1,41 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <ProductTable v-bind:products="products"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ProductTable from './components/ProductTable.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    ProductTable
+  },
+  data() {
+    return {
+      products: [
+        {
+          id: 1,
+          name: 'Test Name 1',
+          description: 'Test Description 1',
+          rating: 1
+        },
+        {
+          id: 2,
+          name: 'Test Name 2',
+          description: 'Test Description 2',
+          rating: 2
+        },
+        {
+          id: 3,
+          name: 'Test Name 3',
+          description: 'Test Description 3',
+          rating: 3
+        }
+      ]
+    }
   }
 }
 </script>
