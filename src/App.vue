@@ -24,6 +24,7 @@ export default {
       .get('https://services.odata.org/Experimental/OData/OData.svc/Products')
       .then(response => (this.products = response.data.value))
       .then(() => this.isLoading = false)
+      .catch((err) => console.error(err))
   }
 }
 </script>
