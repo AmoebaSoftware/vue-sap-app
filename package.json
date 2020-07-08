@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@sap/cds": "^3",
+    "axios": "^0.19.2",
     "core-js": "^3.6.5",
     "express": "^4",
     "fiori-fundamentals": "^1.7.5",
