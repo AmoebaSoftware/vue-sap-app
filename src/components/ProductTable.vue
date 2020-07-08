@@ -1,5 +1,5 @@
 <template>
-  <fd-table :headers="['Name', 'Description', 'ReleaseDate', 'Rating', 'Price',]" :items="products">
+  <fd-table :headers="headers" :items="products">
     <template #row="{ item }">
       <fd-table-row>
         <template #Name>
@@ -25,7 +25,37 @@
 <script>
 export default {
   name: "ProductTable",
-  props:  ['products']
+  props:  ['products'],
+  data() {
+    return {
+      headers: [{
+        key: 'Name',
+        label: 'Name',
+        sortable: true,
+        sortBy: 'Name'
+      },
+      'Description',
+      { 
+        label: 'Release Date',
+        key: 'ReleaseDate',
+        sortable: true,
+        sortBy: 'ReleaseDate'
+      },
+      {
+        label: 'Rating',
+        key: 'Rating',
+        sortable: true,
+        sortBy: 'Rating'
+      },
+      {
+        label: 'Price',
+        key: 'Price',
+        sortable: true,
+        sortBy: 'Price'
+      },
+      ]
+    }
+  }
 };
 </script>
 
