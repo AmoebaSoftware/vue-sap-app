@@ -24,7 +24,7 @@
 
 <script>
 export default {
-  name: "ProductTable",
+  name: 'ProductTable',
   props:  ['products'],
   data() {
     return {

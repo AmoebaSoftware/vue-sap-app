@@ -1,29 +1,6 @@
 <template>
   <div id="app">
-    <fd-shell-bar>
-      <fd-shell-bar-group position="start">
-        <fd-shell-bar-logo alt="SAP" src="'assets/sap-logo.png'" width="48" height="24" />
-        <fd-shell-bar-product productTitle="Product Name" />
-      </fd-shell-bar-group>
-      <fd-shell-bar-group position="end">
-        <fd-shell-bar-actions>
-          <fd-shell-bar-action>
-            <fd-shell-bar-user-menu ref="userMenu">
-              <fd-menu>
-                <fd-menu-list>
-                  <fd-menu-item @click="closeUserMenu">
-                    Settings
-                  </fd-menu-item>
-                  <fd-menu-item @click="closeUserMenu">
-                    Sign out
-                  </fd-menu-item>
-                </fd-menu-list>
-              </fd-menu>
-            </fd-shell-bar-user-menu>
-          </fd-shell-bar-action>
-        </fd-shell-bar-actions>
-      </fd-shell-bar-group>
-    </fd-shell-bar>
+    <AppHeader></AppHeader>
     <fd-container centered>
       <ProductTable v-bind:products="products" v-if="!isLoading"/>
     </fd-container>
@@ -31,13 +8,15 @@
 </template>
 
 <script>
-import ProductTable from './components/ProductTable.vue'
+import ProductTable from './components/ProductTable'
+import AppHeader from './components/AppHeader';
 import axios from 'axios';
 
 export default {
   name: 'App',
   components: {
-    ProductTable
+    ProductTable,
+    AppHeader,
   },
   data() {
     return {
@@ -51,11 +30,6 @@ export default {
       .then(response => (this.products = response.data.value))
       .then(() => this.isLoading = false)
       .catch((err) => console.error(err))
-  },
-  methods: {
-    closeUserMenu() {
-      this.$refs.userMenu.close();
-    }
   },
 }
 </script>
