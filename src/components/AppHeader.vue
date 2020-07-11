@@ -1,7 +1,7 @@
 <template>
   <fd-shell-bar>
       <fd-shell-bar-group position="start">
-        <fd-shell-bar-logo alt="SAP" src="'../assets/sap-logo.png'" width="48" height="24" />
+        <fd-shell-bar-logo alt="SAP" src="assets/sap-logo@2x.png" width="48" height="24" />
         <fd-shell-bar-product productTitle="Product Name" />
       </fd-shell-bar-group>
       <fd-shell-bar-group position="end">
