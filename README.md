@@ -1,5 +1,7 @@
 # vue-sap-app
 
+A sample app combining Vue, SAP (Fiori), OData and TypeScript
+
 ## Project setup
 ```
 npm install
