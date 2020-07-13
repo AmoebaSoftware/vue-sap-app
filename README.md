@@ -1,6 +1,6 @@
 # vue-sap-app
 
-A sample app combining Vue, SAP (Fiori), OData and TypeScript
+A sample app combining Vue, SAP (Fiori), OData and JavaScript
 
 ## Project setup
 ```
